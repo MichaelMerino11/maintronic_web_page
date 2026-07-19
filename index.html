@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="assets/css/servicios.css" />
     <link rel="stylesheet" href="assets/css/distribucion.css" />
     <link rel="stylesheet" href="assets/css/clientes.css" />
+    <link rel="stylesheet" href="assets/css/contacto.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
   </head>
   <body>
     <!-- ── NAVBAR ── -->
@@ -569,26 +571,216 @@
         </div>
       </section>
 
-      <section
-        id="contacto"
-        style="
-          min-height: 60vh;
-          background: var(--color-navy-dark);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <p
-          style="
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: white;
-          "
-        >
-          CONTACTO — Etapa 6
-        </p>
+      <!-- ── CONTACTO ── -->
+      <section id="contacto">
+        <div class="container">
+          <div class="contacto__intro fade-up">
+            <span class="label">Contáctenos</span>
+            <h2 class="section-title section-title--white">
+              Hablemos de<br />su proyecto
+            </h2>
+            <div class="divider"></div>
+            <p class="section-desc section-desc--white">
+              Un especialista se comunicará con usted y juntos analizaremos la
+              mejor alternativa para su requerimiento.
+            </p>
+          </div>
+
+          <div class="contacto__grid">
+            <!-- Info -->
+            <div class="contacto__info fade-up" style="transition-delay: 0.1s">
+              <div class="contacto__persona">
+                <span class="contacto__rol">Gerente General</span>
+                <p class="contacto__nombre">Miguel A. Pino</p>
+                <ul class="contacto__detalles">
+                  <li>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                    <span>+593 99 979 6375</span>
+                  </li>
+                  <li>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <a href="mailto:miguel.pino@maintronic.com.ec"
+                      >miguel.pino@maintronic.com.ec</a
+                    >
+                  </li>
+                  <li>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <a href="mailto:info@maintronic.com.ec"
+                      >info@maintronic.com.ec</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contacto__oficinas">
+                <span class="contacto__oficinas-titulo">Nuestras Oficinas</span>
+
+                <div class="oficina">
+                  <h4 class="oficina__ciudad">Quito — Matriz</h4>
+                  <p class="oficina__dir">Galo Molina S11-299 y Liribamba</p>
+                  <p class="oficina__tel">Tel: (02) 2610 960 · 099 979 6375</p>
+                </div>
+
+                <div class="oficina">
+                  <h4 class="oficina__ciudad">Guayaquil</h4>
+                  <p class="oficina__dir">
+                    Calle Segunda No. 212 y callejón primero,<br />Ciudadela
+                    Mapasingue Este
+                  </p>
+                </div>
+
+                <div class="oficina">
+                  <h4 class="oficina__ciudad">Riobamba</h4>
+                  <p class="oficina__dir">
+                    Calle Totonto MZ7 L37 y Santo Domingo
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario -->
+            <form
+              class="contacto__form fade-up"
+              id="contactForm"
+              novalidate
+              style="transition-delay: 0.2s"
+            >
+              <div class="form__group">
+                <label class="form__label" for="nombre">Nombre *</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Su nombre completo"
+                  required
+                />
+                <span class="form__error" id="error-nombre"></span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="email">Email *</label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="correo@empresa.com"
+                  required
+                />
+                <span class="form__error" id="error-email"></span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="empresa">Empresa</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="empresa"
+                  name="empresa"
+                  placeholder="Nombre de su empresa"
+                />
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="mensaje">Mensaje *</label>
+                <textarea
+                  class="form__input form__textarea"
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Cuéntenos sobre su proyecto o requerimiento…"
+                  required
+                ></textarea>
+                <span class="form__error" id="error-mensaje"></span>
+              </div>
+
+              <button class="form__submit" type="submit" id="formSubmit">
+                <span class="form__submit-text">Enviar Mensaje</span>
+                <span class="form__submit-loading" aria-hidden="true"
+                  >Enviando…</span
+                >
+              </button>
+
+              <p class="form__success" id="formSuccess" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
       </section>
+
+      <!-- ── FOOTER ── -->
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__brand">
+            <a href="#hero" class="footer__logo">
+              <img src="assets/img/logo.png" alt="Maintronic Ecuador" />
+            </a>
+            <p class="footer__tagline">
+              Soluciones eléctricas, electrónicas<br />y automatización
+              industrial
+            </p>
+          </div>
+
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <ul>
+              <li><a href="#quienes">Quiénes Somos</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#distribucion">Distribución</a></li>
+              <li><a href="#clientes">Clientes</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__contact">
+            <p>info@maintronic.com.ec</p>
+            <p>+593 99 979 6375</p>
+            <p>www.maintronic.com.ec</p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="container">
+            <p>
+              © <span id="footerYear"></span> Maintronic Ecuador S.A. Todos los
+              derechos reservados.
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
 
     <!-- Scripts -->

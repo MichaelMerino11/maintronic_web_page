@@ -1,0 +1,234 @@
+/* ── CONTACTO ── */
+#contacto {
+  background: var(--color-navy-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+#contacto::before {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(ellipse, rgba(224, 123, 16, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contacto__intro {
+  margin-bottom: 3.5rem;
+}
+
+/* ── GRID ── */
+.contacto__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ── INFO ── */
+.contacto__persona {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contacto__rol {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 0.4rem;
+}
+
+.contacto__nombre {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+}
+
+.contacto__detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contacto__detalles li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.contacto__detalles li svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-orange);
+}
+
+.contacto__detalles a {
+  color: rgba(255, 255, 255, 0.58);
+  transition: color var(--transition);
+}
+
+.contacto__detalles a:hover {
+  color: var(--color-orange-lt);
+}
+
+/* ── OFICINAS ── */
+.contacto__oficinas-titulo {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 1.25rem;
+}
+
+.oficina {
+  padding-left: 1rem;
+  border-left: 2px solid rgba(224, 123, 16, 0.35);
+  margin-bottom: 1.25rem;
+  transition: border-color var(--transition);
+}
+
+.oficina:hover {
+  border-left-color: var(--color-orange);
+}
+
+.oficina__ciudad {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-orange-lt);
+  margin-bottom: 0.25rem;
+}
+
+.oficina__dir,
+.oficina__tel {
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+/* ── FORMULARIO ── */
+.contacto__form {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.5rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form__label {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 300;
+  transition: border-color var(--transition), background var(--transition);
+  outline: none;
+}
+
+.form__input::placeholder {
+  color: rgba(255, 255, 255, 0.22);
+}
+
+.form__input:focus {
+  border-color: var(--color-orange);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form__input--error {
+  border-color: #e05555;
+}
+
+.form__textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form__error {
+  font-size: 0.76rem;
+  color: #e07070;
+  min-height: 1rem;
+}
+
+/* ── SUBMIT ── */
+.form__submit {
+  position: relative;
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background var(--transition);
+  overflow: hidden;
+}
+
+.form__submit:hover:not(:disabled) {
+  background: var(--color-orange-lt);
+}
+
+.form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form__submit-loading {
+  display: none;
+}
+
+.form__submit.is-loading .form__submit-text    { display: none; }
+.form__submit.is-loading .form__submit-loading { display: block; }
+
+/* ── SUCCESS ── */
+.form__success {
+  font-size: var(--fs-sm);
+  color: #6fcf97;
+  text-align: center;
+  min-height: 1.2rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .contacto__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

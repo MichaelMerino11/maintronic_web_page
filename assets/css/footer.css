@@ -1,0 +1,93 @@
+/* ── FOOTER ── */
+.footer {
+  background: var(--color-navy-deep);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* ── BRAND ── */
+.footer__logo img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+  transition: opacity var(--transition);
+  margin-bottom: 1rem;
+}
+
+.footer__logo:hover img {
+  opacity: 0.85;
+}
+
+.footer__tagline {
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ── NAV ── */
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer__nav a {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.38);
+  transition: color var(--transition);
+}
+
+.footer__nav a:hover {
+  color: var(--color-orange-lt);
+}
+
+/* ── CONTACT ── */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__contact p {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.38);
+}
+
+/* ── BOTTOM ── */
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.25rem 0;
+}
+
+.footer__bottom p {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
