@@ -23,8 +23,12 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/hero.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/quienes.css" />
+    <link rel="stylesheet" href="assets/css/servicios.css" />
+    <link rel="stylesheet" href="assets/css/distribucion.css" />
+    <link rel="stylesheet" href="assets/css/clientes.css" />
   </head>
   <body>
     <!-- ── NAVBAR ── -->
@@ -151,88 +155,418 @@
         </div>
       </section>
 
-      <section
-        id="quienes"
-        style="
-          min-height: 60vh;
-          background: var(--color-off-white);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <p
-          style="
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: var(--color-navy);
-          "
-        >
-          QUIÉNES SOMOS — Etapa 3
-        </p>
+      <!-- ── QUIÉNES SOMOS ── -->
+      <section id="quienes">
+        <div class="container quienes__grid">
+          <div class="quienes__img-wrap fade-up">
+            <img
+              src="assets/img/quienes-bg.png"
+              alt="Equipo Maintronic Ecuador en proyecto de ingeniería"
+              loading="lazy"
+            />
+            <div class="quienes__img-accent"></div>
+          </div>
+
+          <div class="quienes__content fade-up" style="transition-delay: 0.15s">
+            <span class="label">Quiénes Somos</span>
+            <h2 class="section-title">Ingeniería<br />con propósito</h2>
+            <div class="divider"></div>
+            <p class="section-desc">
+              Empresa ecuatoriana en el mercado desde 2006, prestando servicios
+              de consultoría, ingeniería e implementación de proyectos con
+              profesionales especializados en Ingeniería Eléctrica, Electrónica,
+              Mecánica, Domótica y Automatización Industrial.
+            </p>
+
+            <div class="mvv">
+              <div class="mvv__card">
+                <h3 class="mvv__label">Misión</h3>
+                <p class="mvv__text">
+                  Brindar soluciones técnico-económicas a los requerimientos de
+                  nuestros clientes con profesionalismo, calidad y seguridad.
+                </p>
+              </div>
+              <div class="mvv__card">
+                <h3 class="mvv__label">Visión</h3>
+                <p class="mvv__text">
+                  Ser una empresa líder reconocida nacional e internacionalmente
+                  por su calidad de servicio y capacidad de ofrecer soluciones
+                  confiables e innovadoras.
+                </p>
+              </div>
+              <div class="mvv__card">
+                <h3 class="mvv__label">Política de Calidad</h3>
+                <p class="mvv__text">
+                  Nos adaptamos a sus proyectos con profesionalismo,
+                  competitividad y calidad, logrando mejoramiento continuo en el
+                  tiempo.
+                </p>
+              </div>
+            </div>
+
+            <div class="valores">
+              <span class="valores__badge">Ética Profesional</span>
+              <span class="valores__badge">Responsabilidad</span>
+              <span class="valores__badge">Transparencia</span>
+              <span class="valores__badge">Compromiso</span>
+              <span class="valores__badge">Trabajo en equipo</span>
+              <span class="valores__badge">Liderazgo</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section
-        id="servicios"
-        style="
-          min-height: 60vh;
-          background: var(--color-navy-deep);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <p
-          style="
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: white;
-          "
-        >
-          SERVICIOS — Etapa 4
-        </p>
+      <!-- ── SERVICIOS ── -->
+      <section id="servicios">
+        <div class="container">
+          <div class="servicios__intro fade-up">
+            <span class="label">Servicios</span>
+            <h2 class="section-title section-title--white">
+              Lo que<br />hacemos
+            </h2>
+            <div class="divider"></div>
+            <p class="section-desc section-desc--white">
+              Para satisfacer las necesidades de nuestros clientes, ponemos a
+              disposición nuestra capacidad y experiencia en las principales
+              áreas de la ingeniería industrial.
+            </p>
+          </div>
+
+          <div class="servicios__grid">
+            <article class="servicio-card fade-up">
+              <div class="servicio-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="8" height="8" rx="1" />
+                  <rect x="14" y="2" width="8" height="8" rx="1" />
+                  <rect x="2" y="14" width="8" height="8" rx="1" />
+                  <circle cx="18" cy="18" r="3" />
+                  <line x1="18" y1="15" x2="18" y2="21" />
+                  <line x1="15" y1="18" x2="21" y2="18" />
+                </svg>
+              </div>
+              <h3 class="servicio-card__title">Automatización Industrial</h3>
+              <p class="servicio-card__desc">
+                Diseño e implementación de sistemas de control automático para
+                procesos industriales, integrando PLCs, HMIs y SCADA.
+              </p>
+              <img
+                class="servicio-card__img"
+                src="assets/img/servicios/automatizacion.png"
+                alt="Automatización Industrial"
+                loading="lazy"
+              />
+            </article>
+
+            <article
+              class="servicio-card fade-up"
+              style="transition-delay: 0.05s"
+            >
+              <div class="servicio-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
+                  />
+                </svg>
+              </div>
+              <h3 class="servicio-card__title">Ingeniería Mecánica</h3>
+              <p class="servicio-card__desc">
+                Proyectos de ingeniería mecánica para la industria: diseño,
+                mantenimiento y optimización de sistemas mecánicos y maquinaria.
+              </p>
+              <img
+                class="servicio-card__img"
+                src="assets/img/servicios/mecanica.png"
+                alt="Ingeniería Mecánica"
+                loading="lazy"
+              />
+            </article>
+
+            <article
+              class="servicio-card fade-up"
+              style="transition-delay: 0.1s"
+            >
+              <div class="servicio-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3 class="servicio-card__title">
+                Sistemas de Seguridad Integral
+              </h3>
+              <p class="servicio-card__desc">
+                Diseño e instalación de sistemas de seguridad electrónica: CCTV,
+                control de acceso, detección de intrusos y alarmas.
+              </p>
+              <img
+                class="servicio-card__img"
+                src="assets/img/servicios/seguridad.png"
+                alt="Sistemas de Seguridad"
+                loading="lazy"
+              />
+            </article>
+
+            <article
+              class="servicio-card fade-up"
+              style="transition-delay: 0.15s"
+            >
+              <div class="servicio-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+              <h3 class="servicio-card__title">Proyectos de Generación</h3>
+              <p class="servicio-card__desc">
+                Implementación de proyectos de generación eléctrica, energía
+                solar fotovoltaica y grupos electrógenos industriales.
+              </p>
+              <img
+                class="servicio-card__img"
+                src="assets/img/servicios/generacion.png"
+                alt="Proyectos de Generación"
+                loading="lazy"
+              />
+            </article>
+
+            <article
+              class="servicio-card fade-up"
+              style="transition-delay: 0.2s"
+            >
+              <div class="servicio-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <h3 class="servicio-card__title">Domótica e Inmótica</h3>
+              <p class="servicio-card__desc">
+                Automatización de hogares y edificios inteligentes: iluminación,
+                climatización, seguridad y sistemas de confort integrados.
+              </p>
+              <img
+                class="servicio-card__img"
+                src="assets/img/servicios/domotica.png"
+                alt="Domótica e Inmótica"
+                loading="lazy"
+              />
+            </article>
+
+            <article
+              class="servicio-card fade-up"
+              style="transition-delay: 0.25s"
+            >
+              <div class="servicio-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  <line x1="2" y1="20" x2="22" y2="20" />
+                </svg>
+              </div>
+              <h3 class="servicio-card__title">Media y Baja Tensión</h3>
+              <p class="servicio-card__desc">
+                Instalaciones eléctricas en media y baja tensión: subestaciones,
+                tableros de distribución y mantenimiento eléctrico industrial.
+              </p>
+              <img
+                class="servicio-card__img"
+                src="assets/img/servicios/tension.png"
+                alt="Media y Baja Tensión"
+                loading="lazy"
+              />
+            </article>
+
+            <article
+              class="servicio-card fade-up"
+              style="transition-delay: 0.3s"
+            >
+              <div class="servicio-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+              </div>
+              <h3 class="servicio-card__title">Consultoría e Ingeniería</h3>
+              <p class="servicio-card__desc">
+                Asesoría técnica especializada, estudios de factibilidad, diseño
+                de proyectos y fiscalización de obras eléctricas y electrónicas.
+              </p>
+              <img
+                class="servicio-card__img"
+                src="assets/img/servicios/consultoria.png"
+                alt="Consultoría e Ingeniería"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </div>
       </section>
 
-      <section
-        id="distribucion"
-        style="
-          min-height: 60vh;
-          background: var(--color-off-white);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <p
-          style="
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: var(--color-navy);
-          "
-        >
-          DISTRIBUCIÓN — Etapa 5
-        </p>
+      <!-- ── DISTRIBUCIÓN ── -->
+      <section id="distribucion">
+        <div class="container">
+          <div class="dist__intro fade-up">
+            <span class="label">Distribución de Productos</span>
+            <h2 class="section-title">Marcas que<br />representamos</h2>
+            <div class="divider"></div>
+            <p class="section-desc">
+              Somos distribuidores autorizados de empresas líderes a nivel
+              mundial en tecnología de automatización, control y sistemas
+              inteligentes.
+            </p>
+          </div>
+
+          <div class="dist__grid">
+            <article class="dist-card fade-up">
+              <div class="dist-card__header">
+                <span class="dist-card__flag">🇨🇦 Canadá</span>
+                <h3 class="dist-card__name">HDL</h3>
+              </div>
+              <img
+                class="dist-card__img"
+                src="assets/img/distribuidores/hdl.jpg"
+                alt="HDL Canadá"
+                loading="lazy"
+              />
+              <p class="dist-card__desc">
+                Fundada en 1985, especializada en equipos de control,
+                iluminación, domótica e inmótica para la creación de ambientes
+                inteligentes.
+              </p>
+            </article>
+
+            <article class="dist-card fade-up" style="transition-delay: 0.08s">
+              <div class="dist-card__header">
+                <span class="dist-card__flag">🇧🇷 Brasil</span>
+                <h3 class="dist-card__name">Vivance</h3>
+              </div>
+              <img
+                class="dist-card__img"
+                src="assets/img/distribuidores/vivance.jpg"
+                alt="Vivance Brasil"
+                loading="lazy"
+              />
+              <p class="dist-card__desc">
+                Empresa con presencia en 17 países, especializada en productos
+                dedicados a la automatización y control industrial.
+              </p>
+            </article>
+
+            <article class="dist-card fade-up" style="transition-delay: 0.16s">
+              <div class="dist-card__header">
+                <span class="dist-card__flag">🇨🇦 Canadá</span>
+                <h3 class="dist-card__name">Nanometrics</h3>
+              </div>
+              <img
+                class="dist-card__img"
+                src="assets/img/distribuidores/nanometrics.jpg"
+                alt="Nanometrics Canadá"
+                loading="lazy"
+              />
+              <p class="dist-card__desc">
+                Tecnología de punta en monitoreo y análisis sísmico para
+                proyectos de infraestructura, minería y geotécnica.
+              </p>
+            </article>
+
+            <article class="dist-card fade-up" style="transition-delay: 0.24s">
+              <div class="dist-card__header">
+                <span class="dist-card__flag">🇮🇹 Italia</span>
+                <h3 class="dist-card__name">Weghgroup</h3>
+              </div>
+              <img
+                class="dist-card__img"
+                src="assets/img/distribuidores/weghgroup.jpg"
+                alt="Weghgroup Italia"
+                loading="lazy"
+              />
+              <p class="dist-card__desc">
+                Más de 60 años de experiencia como aliado estratégico en
+                soluciones de transporte ferroviario y sistemas de metro.
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <section
-        id="clientes"
-        style="
-          min-height: 60vh;
-          background: var(--color-white);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <p
-          style="
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: var(--color-navy);
-          "
-        >
-          CLIENTES — Etapa 5
-        </p>
+      <!-- ── CLIENTES ── -->
+      <section id="clientes">
+        <div class="container">
+          <div class="clientes__intro fade-up">
+            <span class="label">Clientes</span>
+            <h2 class="section-title">Empresas que<br />confían en nosotros</h2>
+            <div class="divider"></div>
+            <p class="section-desc">
+              Colaboramos con empresas públicas y privadas en todo el Ecuador
+              que buscan calidad y confiabilidad en servicios de ingeniería
+              eléctrica y electrónica.
+            </p>
+          </div>
+
+          <div class="clientes__logos fade-up">
+            <img
+              src="assets/img/clientes-logos.png"
+              alt="Clientes de Maintronic Ecuador"
+              loading="lazy"
+            />
+          </div>
+
+          <blockquote class="clientes__quote fade-up">
+            <div class="clientes__quote-bar"></div>
+            <p>
+              Brindando soluciones a medida con profesionalismo, calidad y
+              seguridad para cada uno de nuestros clientes desde 2006.
+            </p>
+          </blockquote>
+        </div>
       </section>
 
       <section

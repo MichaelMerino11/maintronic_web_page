@@ -1,0 +1,90 @@
+/* ── DISTRIBUCIÓN ── */
+#distribucion {
+  background: var(--color-off-white);
+}
+
+.dist__intro {
+  margin-bottom: 3rem;
+}
+
+/* ── GRID ── */
+.dist__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── CARD ── */
+.dist-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition-slow), transform var(--transition-slow);
+}
+
+.dist-card:hover {
+  box-shadow: 0 8px 32px rgba(3, 54, 99, 0.1);
+  transform: translateY(-3px);
+}
+
+/* ── HEADER ── */
+.dist-card__header {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.dist-card__flag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 0.5rem;
+}
+
+.dist-card__name {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  letter-spacing: 0.03em;
+  color: var(--color-navy);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+/* ── IMAGEN ── */
+.dist-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  opacity: 0.88;
+  transition: opacity var(--transition-slow);
+}
+
+.dist-card:hover .dist-card__img {
+  opacity: 1;
+}
+
+/* ── DESC ── */
+.dist-card__desc {
+  padding: 1.25rem 1.5rem 1.5rem;
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: var(--color-gray-mid);
+  flex: 1;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .dist__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dist__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,116 @@
+/* ── QUIÉNES SOMOS ── */
+#quienes {
+  background: var(--color-off-white);
+}
+
+.quienes__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ── IMAGEN ── */
+.quienes__img-wrap {
+  position: relative;
+}
+
+.quienes__img-wrap img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.quienes__img-accent {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  width: 120px;
+  height: 120px;
+  background: var(--color-orange);
+  border-radius: var(--radius-sm);
+  z-index: -1;
+}
+
+/* ── CONTENIDO ── */
+.quienes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.quienes__content .label     { margin-bottom: 0.75rem; }
+.quienes__content .section-title { margin-bottom: 0; }
+.quienes__content .section-desc  { margin-bottom: 2rem; }
+
+/* ── MVV ── */
+.mvv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.mvv__card {
+  background: var(--color-white);
+  border-left: 3px solid var(--color-orange);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.mvv__card:hover {
+  transform: translateX(4px);
+  box-shadow: -3px 0 0 var(--color-orange), 2px 4px 16px rgba(3, 54, 99, 0.08);
+}
+
+.mvv__label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 0.4rem;
+}
+
+.mvv__text {
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: var(--color-gray-dark);
+}
+
+/* ── VALORES ── */
+.valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.valores__badge {
+  background: var(--color-navy);
+  color: rgba(255, 255, 255, 0.88);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: background var(--transition);
+}
+
+.valores__badge:hover {
+  background: var(--color-orange);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .quienes__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .quienes__img-wrap {
+    display: none;
+  }
+}

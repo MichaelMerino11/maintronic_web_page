@@ -1,0 +1,60 @@
+/* ── CLIENTES ── */
+#clientes {
+  background: var(--color-white);
+}
+
+.clientes__intro {
+  margin-bottom: 3rem;
+}
+
+/* ── LOGOS ── */
+.clientes__logos {
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.clientes__logos img {
+  width: 100%;
+  display: block;
+}
+
+/* ── QUOTE ── */
+.clientes__quote {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--color-navy);
+  padding: 2rem 2.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.clientes__quote-bar {
+  flex-shrink: 0;
+  width: 4px;
+  height: 56px;
+  background: var(--color-orange);
+  border-radius: 2px;
+}
+
+.clientes__quote p {
+  font-size: var(--fs-md);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  font-style: italic;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .clientes__quote {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .clientes__quote-bar {
+    width: 40px;
+    height: 4px;
+  }
+}

@@ -1,0 +1,137 @@
+/* ── SERVICIOS ── */
+#servicios {
+  background: var(--color-navy-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+#servicios::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 55%;
+  height: 130%;
+  background: radial-gradient(ellipse, rgba(224, 123, 16, 0.055) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.servicios__intro {
+  margin-bottom: 3.5rem;
+}
+
+/* ── GRID ── */
+.servicios__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── CARD ── */
+.servicio-card {
+  position: relative;
+  background: rgba(3, 54, 99, 0.35);
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: background var(--transition-slow);
+  cursor: default;
+}
+
+/* Línea naranja inferior al hacer hover */
+.servicio-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-slow);
+}
+
+.servicio-card:hover {
+  background: rgba(3, 54, 99, 0.65);
+}
+
+.servicio-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── ÍCONO ── */
+.servicio-card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(224, 123, 16, 0.12);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.servicio-card:hover .servicio-card__icon {
+  background: rgba(224, 123, 16, 0.22);
+}
+
+.servicio-card__icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-orange);
+}
+
+/* ── TEXTO ── */
+.servicio-card__title {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.servicio-card__desc {
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.48);
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+/* ── IMAGEN ── */
+.servicio-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  opacity: 0.55;
+  transition: opacity var(--transition-slow);
+}
+
+.servicio-card:hover .servicio-card__img {
+  opacity: 0.75;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .servicios__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicios__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicio-card__img {
+    display: none;
+  }
+}
