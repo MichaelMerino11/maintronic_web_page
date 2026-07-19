@@ -1,3 +1,15 @@
+const EMAILJS_PUBLIC_KEY = "WBEONTSu87h1zDBwf";
+const EMAILJS_SERVICE_ID = "service_6hz9duo";
+const EMAILJS_TEMPLATE_ID = "template_xcmcezh";
+
+// ── INIT ──
+(function () {
+  if (typeof emailjs !== "undefined") {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+})();
+
+// ── REFS ──
 const form = document.getElementById("contactForm");
 const btnSubmit = document.getElementById("formSubmit");
 const msgSuccess = document.getElementById("formSuccess");
@@ -8,16 +20,25 @@ if (form) {
     if (!validateForm()) return;
     sendForm();
   });
+
+  // Limpia error al retomar foco en un campo
+  form.querySelectorAll(".form__input").forEach((input) => {
+    input.addEventListener("input", () => {
+      input.classList.remove("form__input--error");
+      const errorEl = document.getElementById("error-" + input.id);
+      if (errorEl) errorEl.textContent = "";
+    });
+  });
 }
 
+// ── VALIDACIÓN ──
 function validateForm() {
   let valid = true;
+  clearErrors();
 
   const nombre = document.getElementById("nombre");
   const email = document.getElementById("email");
   const mensaje = document.getElementById("mensaje");
-
-  clearErrors();
 
   if (!nombre.value.trim()) {
     showError("error-nombre", "El nombre es obligatorio.");
@@ -29,7 +50,7 @@ function validateForm() {
     showError("error-email", "El email es obligatorio.");
     email.classList.add("form__input--error");
     valid = false;
-  } else if (!isValidEmail(email.value)) {
+  } else if (!isValidEmail(email.value.trim())) {
     showError("error-email", "Ingrese un email válido.");
     email.classList.add("form__input--error");
     valid = false;
@@ -44,22 +65,40 @@ function validateForm() {
   return valid;
 }
 
+// ── ENVÍO ──
 function sendForm() {
-  // Estado de carga
-  btnSubmit.classList.add("is-loading");
-  btnSubmit.disabled = true;
+  setLoading(true);
   msgSuccess.textContent = "";
 
-  // Aquí irá la integración con EmailJS en la Etapa 7
-  // Por ahora simulamos el envío con un timeout
-  setTimeout(() => {
-    btnSubmit.classList.remove("is-loading");
-    btnSubmit.disabled = false;
-    msgSuccess.textContent =
-      "✓ Mensaje enviado. Nos pondremos en contacto pronto.";
-    form.reset();
-    clearErrors();
-  }, 1500);
+  const params = {
+    nombre: document.getElementById("nombre").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    empresa: document.getElementById("empresa").value.trim() || "No indicada",
+    mensaje: document.getElementById("mensaje").value.trim(),
+  };
+
+  emailjs
+    .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+    .then(() => {
+      setLoading(false);
+      msgSuccess.textContent =
+        "✓ Mensaje enviado. Nos pondremos en contacto pronto.";
+      form.reset();
+      clearErrors();
+    })
+    .catch((err) => {
+      setLoading(false);
+      console.error("EmailJS error:", err);
+      msgSuccess.style.color = "#e07070";
+      msgSuccess.textContent =
+        "Ocurrió un error. Por favor escríbanos a info@maintronic.com.ec";
+    });
+}
+
+// ── HELPERS ──
+function setLoading(state) {
+  btnSubmit.classList.toggle("is-loading", state);
+  btnSubmit.disabled = state;
 }
 
 function showError(id, msg) {
