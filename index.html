@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Empresa ecuatoriana desde 2006 especializada en automatización industrial, ingeniería eléctrica, electrónica y mecánica."
+    />
+    <title>Maintronic Ecuador — Ingeniería Eléctrica y Electrónica</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <a href="#hero" class="navbar__logo">
+          <img src="assets/img/logo.png" alt="Maintronic Ecuador" />
+        </a>
+
+        <ul class="navbar__links" id="navLinks">
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#quienes">Quiénes Somos</a></li>
+
+          <li class="has-dropdown">
+            <a href="#servicios">Servicios</a>
+            <ul class="dropdown">
+              <li><a href="#servicios">Automatización Industrial</a></li>
+              <li><a href="#servicios">Ingeniería Mecánica</a></li>
+              <li><a href="#servicios">Sistemas de Seguridad</a></li>
+              <li><a href="#servicios">Proyectos de Generación</a></li>
+              <li><a href="#servicios">Domótica e Inmótica</a></li>
+              <li><a href="#servicios">Media y Baja Tensión</a></li>
+              <li><a href="#servicios">Consultoría e Ingeniería</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="#distribucion">Distribución</a>
+            <ul class="dropdown">
+              <li><a href="#distribucion">HDL — Canadá</a></li>
+              <li><a href="#distribucion">Vivance — Brasil</a></li>
+              <li><a href="#distribucion">Nanometrics — Canadá</a></li>
+              <li><a href="#distribucion">Weghgroup — Italia</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#contacto" class="btn btn--nav-cta">Contáctenos</a></li>
+        </ul>
+
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#hero">Inicio</a>
+      <a href="#quienes">Quiénes Somos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#distribucion">Distribución de Productos</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contacto">Contáctenos</a>
+    </div>
+
+    <!-- ── SECCIONES (se agregan en etapas posteriores) ── -->
+    <main>
+      <!-- ── HERO ── -->
+      <section id="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+
+        <div class="container hero__content">
+          <div class="hero__text">
+            <span class="hero__tag">Ecuador · Desde 2006</span>
+            <h1 class="hero__headline">
+              Soluciones<br />
+              <span class="hero__headline--accent">Eléctricas</span><br />
+              &amp; Electrónicas
+            </h1>
+            <p class="hero__desc">
+              Consultoría, ingeniería e implementación de proyectos en
+              automatización industrial, ingeniería eléctrica, electrónica y
+              mecánica para empresas públicas y privadas.
+            </p>
+            <div class="hero__btns">
+              <a href="#servicios" class="btn btn--primary"
+                >Nuestros Servicios</a
+              >
+              <a href="#contacto" class="btn btn--outline">Contáctenos</a>
+            </div>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num">18<em>+</em></span>
+              <span class="hero__stat-label">Años de experiencia</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">7</span>
+              <span class="hero__stat-label">Líneas de servicio</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">4</span>
+              <span class="hero__stat-label">Marcas distribuidas</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">3</span>
+              <span class="hero__stat-label">Ciudades con presencia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+          <span>Explorar</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <section
+        id="quienes"
+        style="
+          min-height: 60vh;
+          background: var(--color-off-white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--color-navy);
+          "
+        >
+          QUIÉNES SOMOS — Etapa 3
+        </p>
+      </section>
+
+      <section
+        id="servicios"
+        style="
+          min-height: 60vh;
+          background: var(--color-navy-deep);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: white;
+          "
+        >
+          SERVICIOS — Etapa 4
+        </p>
+      </section>
+
+      <section
+        id="distribucion"
+        style="
+          min-height: 60vh;
+          background: var(--color-off-white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--color-navy);
+          "
+        >
+          DISTRIBUCIÓN — Etapa 5
+        </p>
+      </section>
+
+      <section
+        id="clientes"
+        style="
+          min-height: 60vh;
+          background: var(--color-white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--color-navy);
+          "
+        >
+          CLIENTES — Etapa 5
+        </p>
+      </section>
+
+      <section
+        id="contacto"
+        style="
+          min-height: 60vh;
+          background: var(--color-navy-dark);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p
+          style="
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: white;
+          "
+        >
+          CONTACTO — Etapa 6
+        </p>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
